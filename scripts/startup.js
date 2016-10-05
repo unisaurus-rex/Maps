@@ -5,4 +5,4 @@ import initMap from './createLeafletMap';
 
 addToggle(); 
 
-var map = initMap("mapContainer");
+var map = initMap("div.mapPanel", "mapContainer");
