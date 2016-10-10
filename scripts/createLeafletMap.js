@@ -30,6 +30,6 @@ export default function(parentSelector, mapContainerId) {
 function setContainerHeight(selector) {
   var screenHeight = $(window).height();
   var navbarHeight = $(".navbar-default").height();
-  var mapHeight = (screenHeight - navbarHeight) / 2;
+  var mapHeight = (screenHeight - navbarHeight) * 0.65;
   $(selector).height(mapHeight);
 }

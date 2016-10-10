@@ -28,5 +28,7 @@ $font-family-base: Foundry Context;
 }
 
 #mapContainer {
-  height: 80%;
+  height: 90%;
+  min-height: 250px;
+  margin-top: 2%;
 }
