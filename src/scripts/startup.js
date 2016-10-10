@@ -8,5 +8,3 @@ addToggle();
 
 var map1 = initMap("div.mapPanel", "mapContainer");
 drawRegions(map1, us.features, "statepath");
-
-
