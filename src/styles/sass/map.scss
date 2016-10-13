@@ -1,5 +1,27 @@
 .statepath {
-    fill-opacity: .2;
-    stroke: gray;
-    stroke-width: 1px;
+  fill-opacity: .2;
+  stroke: gray;
+  stroke-width: 1px;
+}
+
+.countypath {
+  fill-opacity: .6;
+  fill: cornflowerblue;
+  stroke: black;
+  stroke-width: 1px;
+}
+
+.lowSales {
+  fill-opacity: .6;
+  fill: red;
+}
+
+.avgSales {
+  fill-opacity: .6;
+  fill: blue;
+}
+
+.highSales {
+  fill-opacity: .6;
+  fill: green;
 }

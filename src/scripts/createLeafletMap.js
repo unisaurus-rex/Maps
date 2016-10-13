@@ -2,7 +2,7 @@
 
 // parentSelector: css selector for parent of map container
 // mapContainerId: id of map container
-export default function(parentSelector, mapContainerId) {
+export default function(parentSelector, mapContainerId, mapCenter, initialZoom) {
   // initialize map container height
   setContainerHeight(parentSelector);
   
@@ -15,7 +15,7 @@ export default function(parentSelector, mapContainerId) {
   var map = L.map(mapContainerId);
 
   map.options.minZoom = 4;
-  map.setView([37.8, -96.9], 4);
+  map.setView(mapCenter, initialZoom);
 
   // add tile layer to map
   L.tileLayer( 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
