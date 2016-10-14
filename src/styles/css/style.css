@@ -8117,6 +8117,24 @@ a.list-group-item:focus {
 .countypath:hover {
   fill-opacity: .3; }
 
+.mapTooltip {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  padding: 10px;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  pointer-events: none; }
+
+.hidden {
+  display: none; }
+
+.mapTooltip th, .mapTooltip td {
+  padding: 10px; }
+
+.mapTooltip tr:nth-child(even) {
+  background-color: lightgray; }
+
 .navbar-default {
   background-color: #ffffff;
   box-shadow: 0px 2px 2px 0px rgba(2, 2, 2, 0.2);
