@@ -26,7 +26,6 @@ var salesData = {
 };
 
 var map1 = initMap("div.mapPanel", "mapContainer", mapCenter, initialMapZoom);
-drawRegions(map1, us.features, "statepath");
 
 
 $.getJSON('src/scripts/json/counties.json', function(data){

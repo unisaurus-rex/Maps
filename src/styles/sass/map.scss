@@ -5,23 +5,23 @@
 }
 
 .countypath {
-  fill-opacity: .6;
-  fill: cornflowerblue;
+  fill-opacity: .8;
   stroke: black;
   stroke-width: 1px;
 }
 
 .lowSales {
-  fill-opacity: .6;
   fill: red;
 }
 
 .avgSales {
-  fill-opacity: .6;
   fill: blue;
 }
 
 .highSales {
-  fill-opacity: .6;
   fill: green;
+}
+
+.countypath:hover {
+  fill-opacity: .3;
 }
