@@ -1,7 +1,7 @@
 import $ from 'jquery';
-import drawRegions from './drawMapRegions';
-import {getD3ClassFunction} from './countySalesStyle';
-import {initTooltip, positionTooltip, hideTooltip, addTooltipHTML} from './tooltip.js';
+import drawRegions from 'drawMapRegions';
+import {getD3ClassFunction} from 'county-widget/countySalesStyle';
+import {initTooltip, positionTooltip, hideTooltip, addTooltipHTML} from 'tooltip';
 
 /*
   config is object with params:

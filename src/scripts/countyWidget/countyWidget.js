@@ -1,4 +1,4 @@
-import {initCountyMap, styleCountyBySales} from './countyMap';
+import {initCountyMap, styleCountyBySales} from 'county-widget/countyMap';
 
 export function createCountyWidget(config){
   initCountyMap(config);
