@@ -47,17 +47,17 @@ $.getJSON('src/scripts/json/counties.json', function(data){
 
   drawRegions(map1, regions, "countypath");
 
-  // color the regions by total sales amounts 
-  // TODO: need a function that figures that takes demographics to view and styles regions
-  // so it can be called from outside module
-  var d3func = getD3ClassFunction(["18-34","35-54", "55+"]);
-  var counties = d3.selectAll("path.countypath").attr("class", d3func);
+  // select all county paths
+  var counties = d3.selectAll("path.countypath");
   
   // add hidden tooltip
   initTooltip();
 
   // style regions
-  counties.attr("class", d3func);
+  // var d3func = getD3ClassFunction(["18-34","35-54", "55+"]);
+  // counties.attr("class", d3func);
+  styleCountyBySales(["18-34","35-54", "55+"]);
+
   // show/hide tooltip on hover
   counties.on("mouseover", function(d) {
     var tooltipBody = `
@@ -75,8 +75,34 @@ $.getJSON('src/scripts/json/counties.json', function(data){
   });
   counties.on("mouseout", hideTooltip);
   
+  // on checkbox click update the color style for each region
+  $("input[name=demographics]").on("click", function(){
+    var selectedDemographics = getCheckedValues("demographics");
+    styleCountyBySales(selectedDemographics);
+  });
+  
 });
 
+// get checked values as an array
+function getCheckedValues(checkboxName){
+  var selector = "input[name=" + checkboxName + "]:checked";
+  // calling .get() on a jquery object returns a plain array of elements
+  return $(selector).get().map(function(el){return el.value;});
+}
+
+// given an array of demographics ranges, style region by the combined sales of the demographics
+function styleCountyBySales(demographics){
+  // build a function that d3 can use to apply a style to an element
+  var d3func = getD3ClassFunction(demographics);
+  
+  var counties = d3.selectAll("path.countypath");
+  
+  // remove any sales color classes before applying new ones
+  counties.classed("lowSales avgSales highSales", false);
+
+  // apply style function to each county region
+  d3.selectAll("path.countypath").attr("class", d3func);
+}
 
 
 
