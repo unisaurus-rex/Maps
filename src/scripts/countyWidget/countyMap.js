@@ -37,9 +37,6 @@ export function initCountyMap(config){
     // add hidden tooltip
     initTooltip(config.tooltipId, config.tooltipClass);
 
-    // style regions
-    styleCountyBySales(["18-34","35-54", "55+"]);
-
     // show/hide tooltip on hover
     counties.on("mouseover", function(d) {
       var tooltipBody = `
