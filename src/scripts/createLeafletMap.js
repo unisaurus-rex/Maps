@@ -1,3 +1,4 @@
+import $ from 'jquery';
 // don't need to import leaflet because it's included as a cdn in index.html
 
 // parentSelector: css selector for parent of map container
@@ -27,6 +28,9 @@ export default function(parentSelector, mapContainerId, mapCenter, initialZoom) 
 }
 
 // selector: css selector for element
+// container will have no height unless it's specified
+// this function may or may not be needed if you set the height in
+// css
 function setContainerHeight(selector) {
   var screenHeight = $(window).height();
   var navbarHeight = $(".navbar-default").height();
